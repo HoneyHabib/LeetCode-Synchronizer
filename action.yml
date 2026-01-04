@@ -1,5 +1,6 @@
-name: "LeetCode Synchronizer"
-description: "Automatically collect and organize LeetCode submissions into a GitHub repository"
+name: "LeetCode Synchronizer Plus"
+description: "Automatically collect and organize LeetCode submissions into a GitHub repository with added language support(js,py,java) and fallback"
+author: "Honey Habib"
 branding:
   icon: git-commit
   color: black
