@@ -104,12 +104,19 @@ def sync_github(commits, submissions):
             dir_name = f"{str(submission['id']).zfill(4)}-{submission['title_slug']}"
             if submission["language"] == "C++":
                 ext = "cpp"
+            elif submission["language"] in ["JavaScript", "JavaScript (Node.js)"]:
+                ext = "js"
             elif submission["language"] == "MySQL":
                 ext = "sql"
             elif submission["language"] == "Bash":
                 ext = "sh"
+            elif submission["language"] == "Python":
+                ext = "py"
+            elif submission["language"] == "Java":
+                ext = "java"
             else:
-                raise Exception(f"Unknown language : {submission['language']}")
+                # Fallback instead of crashing
+                ext = submission["language"].lower().replace(" ", "")
 
             pathlib.Path(f"problems/{dir_name}").mkdir(parents=True, exist_ok=True)
             with open(f"problems/{dir_name}/{dir_name}.{ext}", "wt") as fd:
