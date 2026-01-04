@@ -1,8 +1,8 @@
-# LeetCode Synchronizer
+# LeetCode Synchronizer Plus
 
-**LeetCode Synchronizer** is a GitHub Action that automatically collects and organizes LeetCode submissions into a GitHub repository.
+**LeetCode Synchronizer Plus** is a GitHub Action that automatically collects and organizes LeetCode submissions into a GitHub repository with added new language (javaScript,Python & Java) support and a fallback so submissions are still synced .
 
-Here's a sample repository created using LeetCode Synchronizer: [leetcode-synchronizer-sample](https://github.com/dos-m0nk3y/leetcode-synchronizer-sample)
+Here's a sample repository created using LeetCode Synchronizer: [leetcode-synchronizer-Plus-sample](https://github.com/HoneyHabib/Problem-Solving)
 
 ## Features
 
@@ -48,7 +48,7 @@ Here's a sample repository created using LeetCode Synchronizer: [leetcode-synchr
          runs-on: ubuntu-latest
          steps:
            - name: Run LeetCode Synchronizer
-             uses: dos-m0nk3y/LeetCode-Synchronizer@v1.1.0
+             uses: HoneyHabib/leetcode-sync@v1
              with:
                GITHUB_TOKEN: ${{ github.token }}
                LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
@@ -65,3 +65,16 @@ Here's a sample repository created using LeetCode Synchronizer: [leetcode-synchr
 - `GITHUB_TOKEN` - **required**. GitHub token used in pushing submissions to the repository
 - `LEETCODE_SESSION` - **required**. LeetCode session used in accessing LeetCode API
 - `LEETCODE_CSRF_TOKEN` - **required**. LeetCode CSRF token used in accessing LeetCode API
+
+
+## Credits
+
+All credit for the original idea and implementation goes to the original author.
+This project is based on the original work by  
+[](https://github.com/dos-m0nk3y/LeetCode-Synchronizer)
+
+This fork extends the original implementation by adding:
+- JavaScript submission support
+- Python submission support
+- Java submission support
+- Improved language fallback handling
