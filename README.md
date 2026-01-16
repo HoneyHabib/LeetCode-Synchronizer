@@ -65,3 +65,11 @@ Here's a sample repository created using LeetCode Synchronizer: [leetcode-synchr
 - `GITHUB_TOKEN` - **required**. GitHub token used in pushing submissions to the repository
 - `LEETCODE_SESSION` - **required**. LeetCode session used in accessing LeetCode API
 - `LEETCODE_CSRF_TOKEN` - **required**. LeetCode CSRF token used in accessing LeetCode API
+
+## New
+This fork extends the original implementation by adding:
+
+   - JavaScript submission support
+   - Python submission support
+   - Java submission support
+   - Improved language fallback handling
